@@ -7,13 +7,11 @@ let mensagem = document.getElementById('mensagem');
 let numeroSorteado = Math.floor(Math.random() * (100) + 1);
 let tentativas = 10;
 
+//math.random = gera um número aleatório entre 0 e 1, incluindo o 0 e excluindo o 1.
 botaoIniciar.addEventListener('click', sortear);
 
 function sortear(){
   botaoIniciar.style = 'display:none';
-  /* 
-  math.random = gera um número aleatório entre 0 e 1, incluindo o 0 e excluindo o 1.
-  */
 }
   
 botaoEnviar.addEventListener('click', comparar);

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <h1> Digite alguma coisa </h1>
+    <input id="input" type="text" required> <p>
+    <input type="button" id="botaoTamanho" value="Calcular tamanho">
+    <input type="button" id="botaoPrimeiroCaractere" value="Mostrar 1 caractere"> <p>
+    <input type="button" id="botaoUltimoCaractere" value="Mostrar último caractere">
+    <input type="button" id="botaoLocalizarString" value="Localizar substring"> <p>
+    <input type="button" id="botaoExtrairString" value="Extrair substring">
+    <input type="button" id="botaoMaiusculo" value="Deixar maiúsculo"> <p>
+    <input type="button" id="botaoMinusculo" value="Deixar minúsculo">
+    <input type="button" id="botaoSubstituir" value="Substituir substring">
+    <div id="resultado"></div>
+</body>
+<script>
+let botaoTamanho = document.getElementById("botaoTamanho");
+let input = document.getElementById("input");
+let resultado = document.getElementById("resultado");
+let botaoPrimeiroCaractere = document.getElementById("botaoPrimeiroCaractere");
+let botaoUltimoCaractere = document.getElementById("botaoUltimoCaractere");
+let botaoMaiusculo = document.getElementById("botaoMaiusculo");
+let botaoMinusculo = document.getElementById("botaoMinusculo");
+let botaoLocalizarString = document.getElementById("botaoLocalizarString");
+let botaoExtrairString = document.getElementById("botaoExtrairString");
+let botaoSubstituir = document.getElementById("botaoSubstituir");
+
+botaoTamanho.addEventListener('click', tamanho);
+
+function tamanho (){
+    resultado.textContent = input.value.length;
+}
+
+botaoPrimeiroCaractere.addEventListener('click', primeiroCaractere);
+
+function primeiroCaractere(){
+    resultado.textContent = input.value[0];
+}
+
+botaoUltimoCaractere.addEventListener('click', ultimoCaractere);
+
+function ultimoCaractere(){
+    let valorInput = input.value;
+    ultimo = valorInput[valorInput.length -1];
+    resultado.textContent = ultimo;
+}
+
+botaoLocalizarString.addEventListener('click', localizar);
+
+function localizar(){
+    resultado.textContent = input.value.indexOf("a");
+}
+
+botaoExtrairString.addEventListener('click', extrair);
+
+function extrair(){
+    resultado.textContent = input.value.slice(0,3);
+}
+
+botaoMaiusculo.addEventListener('click', max);
+
+function max(){
+    resultado.textContent = input.value.toUpperCase();
+}
+
+botaoMinusculo.addEventListener('click', min);
+
+function min(){
+    resultado.textContent = input.value.toLowerCase();
+}
+
+botaoSubstituir.addEventListener('click', sub);
+
+function sub(){
+    resultado.textContent = input.value.replace("ana", "ban");
+}
+</script>
+</html>
