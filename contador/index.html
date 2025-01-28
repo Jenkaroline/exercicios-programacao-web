@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #contador{
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1> Contador </h1>
+    <p id="contador"> 0 </p>
+    <div id="botoes">
+        <input type="button" value="Diminuir" id="botaoDiminuir">
+        <input type="button" value="Resetar" id="botaoResetar">
+        <input type="button" value="Aumentar" id="botaoAumentar">
+    </div>
+
+    <script>
+        let contador = document.getElementById('contador');
+        let botaoDiminuir = document.getElementById('botaoDiminuir');
+        let botaoResetar = document.getElementById('botaoResetar');
+        let botaoAumentar = document.getElementById('botaoAumentar');
+        contador.value = 0;
+
+        botaoResetar.addEventListener('click', resetar);
+
+        function resetar(){
+            contador.textContent = 0;
+            contador.style.color = 'black';
+        }
+
+        botaoAumentar.addEventListener('click', aumentar);
+
+        function aumentar(){
+            contador.value += 1;
+            contador.textContent = contador.value;
+
+            if(contador.value > 0){
+                contador.style.color = 'green';
+            } else if(contador.value < 0){
+                contador.style.color = 'red';
+            }
+        }
+
+        botaoDiminuir.addEventListener('click', diminuir);
+
+        function diminuir(){
+            contador.value -= 1;
+            contador.textContent = contador.value;
+
+            if(contador.value > 0){
+                contador.style.color = 'green';
+            } else if(contador.value < 0){
+                contador.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>
