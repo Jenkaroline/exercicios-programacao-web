@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <div id="lista"> Lista: </div>
+    <div id="item"> Item específico: </div>
+    <div id="array"> Um array inserido em outro: </div>
+    <div id="tamanho"> Tamanho da array: </div>
+    <div id="separada"> Lista separada: </div>
+    <div id="unida1"> Lista em String (com o método Join): </div>
+    <div id="unida2"> Lista em String (com toString): </div>
+
+<script>
+    lista = document.getElementById("lista");
+    item = document.getElementById("item");
+    array = document.getElementById("array");
+    separada = document.getElementById("separada");
+    unida1 = document.getElementById("unida1");
+    unida2 = document.getElementById("unida2");
+
+    listaDeCompras = ["Arroz", [" Feijão", " Macarrão"], " Feijoada", " Carne"]; 
+    var listaJunta = "Arroz, feijão, macarrão, frutas, carnes";
+    separada.textContent += listaJunta.split(",");
+
+    unida1.textContent += listaDeCompras.join(",");
+    unida2.textContent += listaDeCompras.toString();
+
+    //geralmente as arrays são imprimidas na tela dessa forma
+    for (var i = 0; i < listaDeCompras.length; i++) {
+        lista.textContent += listaDeCompras[i];
+    }
+
+    listaDeCompras[0] = "Salada";
+    item.textContent += listaDeCompras[2];
+    array.textContent += listaDeCompras[1][1];
+    tamanho.textContent += listaDeCompras.length;
+</script>    
+</body>
+</html>

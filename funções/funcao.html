@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+<body>
+    <form>
+        <input id="num1" type="number" placeholder="Digite um numero qualquer" required> <p>
+        <input id="num2" type="number" placeholder="Digite um numero qualquer" required> <p>
+        <input id="botao" type="button" value="Calcular"> <p>
+        <input id="botao2" type="button" value="Calcular"> <p>
+        <p id="result"> </p> 
+    </form>
+    <script>
+        var num1 = document.getElementById('num1');
+        var num2 = document.getElementById('num2');
+        var botao = document.getElementById('botao');
+        var result = document.getElementById('result');
+
+        botao.addEventListener('click', calcular);
+
+        function calcular(){
+            result.textContent = Number(num1.value) * Number(num2.value);
+        }
+        
+        botao2.addEventListener('click', calcularSomas);
+
+        function calcularSomas() {
+            let inicio = Number(num1.value);
+            let fim = Number(num2.value);
+            let resultado = "";
+
+            for(let i=inicio; i <=fim; i++){
+                resultado += i + " ";
+            }
+            result.textContent = resultado;
+        }
+    </script>
+</body>
+</html>

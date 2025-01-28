@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trocador de Cores </title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body id="fundo">
+    <input type="button" value="Trocar" id="botaoTrocar">
+
+<script>
+    let fundo = document.getElementsByTagName('body')[0];
+    let botaoTrocar = document.getElementById('botaoTrocar');
+
+    fundo.style = 'background-color: red';
+
+    botaoTrocar.addEventListener('click', trocar);
+
+    function trocar(){
+        //fundo.style.background = 'blue';
+        const cores =['blue', 'pink', 'green', 'yellow', 'black', 'white'];
+        const num = Math.floor(Math.random() * 5); 
+        fundo.style.background = cores[num]; 
+    }
+</script>
+</body>
+</html>
