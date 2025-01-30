@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisões</title>
+    <style>
+        #container{
+            height: 70vh;
+            width: 90vw;
+            margin: 10vh auto;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgba(250, 235, 215, 0.42);
+        }
+        #picture{
+            background-color: beige;
+            border: pink solid 5px;
+            border-radius: 50%;
+            width: 130px;
+            height: 130px;
+            margin: 25px 0;
+        }
+        #text{
+            width: 50%;
+            height: 40%;
+            margin-top: 12px;
+        }
+        #setinhas{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 40%;
+        }
+        #surprise{
+            background-color: rgba(0, 255, 255, 0.221);
+            border: solid pink;
+            padding: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="picture"></div>
+        <div id="name"> Ana </div>
+        <div id="profession"> Professora </div>
+        <div id="text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit praesentium voluptas atque, delectus dolorem nam, sed magni cupiditate iure sapiente accusantium tenetur, at iusto saepe libero. Ex, quibusdam? Accusantium, iusto. </div>
+        <div id="setinhas"> 
+            <input type="button" value="&lt"> 
+            <input type="button" value="&gt">
+        </div>
+        <input type="button" id="surprise" value="Me surpreenda!"></div>
+    </div>
+</body>
+
+<script>
+    
+const reviews = {
+    id: 1,
+    image: "img/image1.png",
+    name: Joana,
+    job: 'Programadora',
+    text: "Lorem ipsum per ipsum molestie pharetra curabitur ultricies potenti phasellus feugiat lacus, cursus interdum curabitur adipiscing non himenaeos adipiscing eleifend consequat auctor, ante vestibulum leo quisque volutpat cras vestibulum massa sociosqu enim. iaculis auctor suscipit sed taciti dictum tempor maecenas eros donec blandit, enim mauris neque est dictum consectetur pulvinar eu enim aenean, egestas torquent id curae ullamcorper sociosqu aliquam faucibus nostra. sollicitudin etiam arcu sed gravida cras ut posuere viverra tellus blandit augue varius, consectetur etiam nostra orci iaculis commodo ligula tempus ornare curae. sodales euismod pulvinar ipsum sociosqu gravida, dui tortor quam magna curabitur, interdum egestas vitae iaculis. "
+}
+
+let container = document.getElementById('container');
+let picture = document.getElementById('picture');
+let name = document.getElementById('name');
+let job = document.getElementById('job');
+let text = document.getElementById('text');
+let leftButton = document.getElementById('leftButton');
+let rightButton = document.getElementById('rightButton');
+let surprise = document.getElementById('surprise');
+
+
+</script>
+</html>

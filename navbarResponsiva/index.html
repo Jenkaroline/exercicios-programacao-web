@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar responsiva</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: azure;
+        }
+        nav{
+            padding: 20px;
+            background-color: rgb(66, 66, 152);
+
+        }
+        ul{
+            list-style-type: none;
+        }
+        .menu-items li{
+            margin-top: 12px;
+        }
+        .menu-icon{
+            display: none;
+        }
+        @media screen and (max-width: 700px){
+            .navbar{
+            padding: 20px;
+            width: 30%;
+            height: 100vh;
+            }
+            ul{
+                padding: 12px;
+                width: 30%;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+            }
+            .menu-icon{
+                display: block;
+            }
+            .menu-icon img{
+                width: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar"> 
+        <div class="menu-icon"> <img src="img/menu.png"></div>
+        <ul class="menu-items">
+            <li> Item 1</li>
+            <li> Item 1</li>
+            <li> Item 1</li>
+            <li> Item 1</li>
+            <li> Item 1</li>
+        </ul>
+    </nav>
+<script>
+    let fundo = document.querySelector('.menu-items');
+    let menu = document.querySelector('.menu-icon');
+    let navbar = document.querySelector('.navbar');
+
+    menu.addEventListener('click', alternar);
+    function alternar(){
+        if(fundo.style.display == 'block'){
+            fundo.style.display = 'none';
+            navbar.style.background ='rgb(66, 66, 152)';
+        } else if(fundo.style.display == 'none'){
+            fundo.style.display = 'block';
+            navbar.style.background ='transparent';
+        }
+    }
+</script>
+</body>
+</html>
