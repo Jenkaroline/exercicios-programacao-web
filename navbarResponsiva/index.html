@@ -16,10 +16,12 @@
         nav{
             padding: 20px;
             background-color: rgb(66, 66, 152);
-
+            height: 5vh;
         }
         ul{
             list-style-type: none;
+            display: flex;
+            justify-content: space-around;
         }
         .menu-items li{
             margin-top: 12px;
@@ -29,9 +31,9 @@
         }
         @media screen and (max-width: 700px){
             .navbar{
-            padding: 20px;
-            width: 30%;
-            height: 100vh;
+                padding: 20px;
+                width: 30%;
+                height: 100vh;
             }
             ul{
                 padding: 12px;
@@ -39,6 +41,7 @@
                 height: 100vh;
                 display: flex;
                 flex-direction: column;
+                justify-content:start;
             }
             .menu-icon{
                 display: block;
@@ -61,18 +64,20 @@
         </ul>
     </nav>
 <script>
-    let fundo = document.querySelector('.menu-items');
+    let fundo = document.querySelector(".menu-items");
     let menu = document.querySelector('.menu-icon');
     let navbar = document.querySelector('.navbar');
 
-    menu.addEventListener('click', alternar);
-    function alternar(){
-        if(fundo.style.display == 'block'){
-            fundo.style.display = 'none';
-            navbar.style.background ='rgb(66, 66, 152)';
-        } else if(fundo.style.display == 'none'){
-            fundo.style.display = 'block';
-            navbar.style.background ='transparent';
+    if (window.matchMedia("(max-width: 700px)").matches) {
+        menu.addEventListener('click', alternar);
+        function alternar(){
+            if (window.getComputedStyle(fundo).display == 'block') {
+                fundo.style.display = "none";
+                navbar.style.background = 'transparent';
+            } else {
+                fundo.style.display = "block";
+                navbar.style.background = 'rgb(66, 66, 152)';
+            }
         }
     }
 </script>
