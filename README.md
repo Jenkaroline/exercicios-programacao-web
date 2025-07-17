@@ -3,5 +3,3 @@ Busco através desses exercícios aprimorar minhas habilidades nas linguagens b�
 
 Link para correções:
 https://github.com/john-smilga/javascript-basic-projects.git
-
-(1)
