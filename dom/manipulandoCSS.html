@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando estilo</title>
+</head>
+
+<body>
+    <p id="frase" style="background-color: blueviolet;"> Olá, tudo bem? </p>
+    <button onclick="mudarCor()"> Clique </button>
+</body>
+
+<script>
+    function mudarCor() {
+        const frase = document.getElementById('frase');
+        frase.style.backgroundColor = 'blue';
+        frase.style.fontSize = '12px';
+    }
+</script>
+
+</html>

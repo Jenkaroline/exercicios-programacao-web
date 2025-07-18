@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<script>
+let palavra = prompt("Digite uma palavra: ");
+let contador = 0;
+
+for (let letra of palavra.toLowerCase()) {
+    if ('aeiou'.includes(letra)) {
+        contador++;
+    }
+}
+console.log(`A palavra "${palavra}" tem ${contador} vogais.`)
+</script>
+</body>
+</html>

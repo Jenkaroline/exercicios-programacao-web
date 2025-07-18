@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo a manipular o DOM</title>
+</head>
+
+<body>
+    <input type="password" name="senha" placeholder="Digite sua senha">
+    <input type="button" class="botao" onclick="clique()" value="Mostrar senha">
+
+
+
+
+
+    <script>
+        function clique() {
+            const input = document.querySelector('input');
+            const botao = document.querySelector('.botao');
+
+            /*
+            const input = document.querySelector('input');
+            //get
+            console.log(input.getAttribute('placeholder'));
+            //has
+            if (input.hasAttribute('placeholder')) {
+                console.log("Tem placeholder");
+            } else {
+                console.log("Não tem placeholder");
+            }
+            */
+
+            //set
+            if (input.getAttribute('type') == 'password') {
+                input.setAttribute('type', 'text');
+                botao.setAttribute('value', 'Ocultar');
+            } else {
+                input.setAttribute('type', 'password');
+                botao.setAttribute('value', 'Mostrar senha');
+            }
+        }
+    </script>
+</body>
+
+</html>
