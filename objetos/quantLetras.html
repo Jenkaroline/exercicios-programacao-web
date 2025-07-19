@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let palavra = prompt("Digite uma palavra: ");
+
+        function contarLetras(palavra) {
+            let contador = {};
+
+            for (let letra of palavra.toLowerCase()) {
+                if (contador[letra]) {
+                    contador[letra] += 1;
+                } else {
+                    contador[letra] = 1;
+                }
+
+            }
+            return contador;
+        }
+
+        console.log(contarLetras(palavra));
+    </script>
+</body>
+
+</html>
