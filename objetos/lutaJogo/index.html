@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lutinha</title>
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .vidas {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding-top: 2em;
+        }
+
+        .personagem {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 5px;
+        }
+
+        .barrinha {
+            background-color: rgb(167, 150, 127);
+            width: 12em;
+            height: 1em;
+            padding: 2px;
+            display: flex;
+            align-items: center;
+        }
+
+        .vida {
+            background-color: rgb(134, 182, 182);
+            width: 100%;
+            height: inherit;
+        }
+
+        .resultado {
+            width: 30vw;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 2em;
+            overflow: auto;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="vidas">
+        <div class="personagem">
+            <div class="barrinha">
+                <div class="vida minhaVida"> </div>
+            </div>
+            <p class="nome"> Personagem 1 </p>
+            <button class="button meuAtaque"> Atacar </button>
+        </div>
+        <div class="personagem">
+            <div class="barrinha">
+                <div class="vida vidaInimigo"> </div>
+            </div>
+            <p class="nome"> Personagem 2 </p>
+            <button class="button ataqueInimigo"> Atacar </button>
+        </div>
+    </div>
+    <div class="resultado"> </div>
+
+    <script src="classes.js" defer> </script>
+</body>
+
+</html>
