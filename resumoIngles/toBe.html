@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verbo to be</title>
+    <link rel="icon" type="img/png" href="assets/icons/favicon.png">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body::-webkit-scrollbar {
+            width: 7px;
+        }
+
+        body::-webkit-scrollbar-track {
+            background: rgb(0, 140, 255);
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background: rgb(240, 245, 255);
+            border-radius: 5px;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        h1 {
+            color: rgb(243, 231, 255);
+        }
+
+        section {
+            background-color: rgb(0, 140, 255);
+            font-family: 'Inter', 'Roboto', system-ui, -apple-system, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 110vh;
+        }
+
+        .card {
+            background-color: aliceblue;
+            padding: 1em;
+            width: 35%;
+            font-weight: 500;
+            border-radius: 5px;
+            padding-left: 2em;
+            margin-bottom: 2em;
+        }
+
+        .card-expandido {
+            box-shadow: 0px 4px 10px rgba(211, 199, 199, 0.2);
+        }
+
+        .card-content {
+            display: none;
+        }
+
+
+        .content-expandido {
+            display: block;
+            height: 10em;
+        }
+
+        .top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .top strong {
+            font-size: larger;
+        }
+
+        .top button {
+            background-color: transparent;
+            border: none;
+        }
+
+
+        .card img {
+            width: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* exercicios */
+
+        .exBloco {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            color: beige;
+            width: 80vw;
+            padding-left: 2em;
+        }
+        .last{
+            margin-bottom: 2em;
+        }
+        .exBloco input{
+            border-radius: 4px;
+            border: solid 1px blue;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <section class="conteudo">
+        <h1> Verbo to be: ser e estar </h1>
+        <div class="card">
+            <div class="top">
+                <strong> I am </strong>
+                <div>
+                    <button type="button">
+                        <img src="assets/icons/som.png" class="imgSom" alt="Ouvir">
+                        <audio class="audio" src="assets/audios/iam.mp3"> </audio>
+                    </button>
+                    <button type="button" class="expandir">
+                        <img src="assets/icons/expandir.png">
+                    </button>
+                </div>
+            </div>
+            <div class="card-content">
+                <em> Ex: I am brazillian. </em>
+                <p> <strong> Contração: </strong> I'm brazillian.</p>
+                <p> <strong> Negação: </strong> I'm not brazillian.</p>
+                <p> <strong> Pergunta: </strong> Am i brazillian? </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="top">
+                <strong> You are </strong>
+                <div>
+                    <button type="button">
+                        <img src="assets/icons/som.png" class="imgSom" alt="Ouvir">
+                        <audio class="audio" src="assets/audios/youare.mp3"> </audio>
+                    </button>
+                    <button type="button" class="expandir">
+                        <img src="assets/icons/expandir.png">
+                    </button>
+                </div>
+            </div>
+            <div class="card-content">
+                <em> Ex: You are brazillian. </em>
+                <p> <strong> Contração: </strong> You're brazillian(s).</p>
+                <p> <strong> Negação: </strong> You aren't brazillian(s).</p>
+                <p> <strong> Pergunta: </strong> Are you brazillian(s)? </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="top">
+                <strong> We are </strong>
+                <div>
+                    <button type="button">
+                        <img src="assets/icons/som.png" class="imgSom" alt="Ouvir">
+                        <audio class="audio" src="assets/audios/weare.mp3"> </audio>
+                    </button>
+                    <button type="button" class="expandir">
+                        <img src="assets/icons/expandir.png">
+                    </button>
+                </div>
+            </div>
+            <div class="card-content">
+                <em> Ex: We are brazillian. </em>
+                <p> <strong> Contração: </strong> We're brazillians.</p>
+                <p> <strong> Negação: </strong> We aren't brazillians.</p>
+                <p> <strong> Pergunta: </strong> Are we brazillians? </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="top">
+                <strong> They are </strong>
+                <div>
+                    <button type="button">
+                        <img src="assets/icons/som.png" class="imgSom" alt="Ouvir">
+                        <audio class="audio" src="assets/audios/theyare.mp3"> </audio>
+                    </button>
+                    <button type="button" class="expandir">
+                        <img src="assets/icons/expandir.png">
+                    </button>
+                </div>
+            </div>
+            <div class="card-content">
+                <em> Ex: They are brazillian. </em>
+                <p> <strong> Contração: </strong> They're brazillians.</p>
+                <p> <strong> Negação: </strong> They aren't brazillians.</p>
+                <p> <strong> Pergunta: </strong> Are they brazillians? </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="top">
+                <strong> He is </strong>
+                <div>
+                    <button type="button">
+                        <img src="assets/icons/som.png" class="imgSom" alt="Ouvir">
+                        <audio class="audio" src="assets/audios/heis.mp3"> </audio>
+                    </button>
+                    <button type="button" class="expandir">
+                        <img src="assets/icons/expandir.png">
+                    </button>
+                </div>
+            </div>
+            <div class="card-content">
+                <em> Ex: He is brazillian. </em>
+                <p> <strong> Contração: </strong> He's brazillian.</p>
+                <p> <strong> Negação: </strong> He ins't brazillian.</p>
+                <p> <strong> Pergunta: </strong> Is he brazillian? </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="top">
+                <strong> She is </strong>
+                <div>
+                    <button type="button">
+                        <img src="assets/icons/som.png" class="imgSom" alt="Ouvir">
+                        <audio class="audio" src="assets/audios/sheis.mp3"> </audio>
+                    </button>
+                    <button type="button" class="expandir">
+                        <img src="assets/icons/expandir.png">
+                    </button>
+                </div>
+            </div>
+            <div class="card-content">
+                <em> Ex: She is brazillian. </em>
+                <p> <strong> Contração: </strong> She's brazillian.</p>
+                <p> <strong> Negação: </strong> She isn't brazillian.</p>
+                <p> <strong> Pergunta: </strong> Is he brazillian? </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="top">
+                <strong> It is </strong>
+                <div>
+                    <button type="button">
+                        <img src="assets/icons/som.png" class="imgSom" alt="Ouvir">
+                        <audio class="audio" src="assets/audios/itis.mp3"> </audio>
+                    </button>
+                    <button type="button" class="expandir">
+                        <img src="assets/icons/expandir.png">
+                    </button>
+                </div>
+            </div>
+            <div class="card-content">
+                <em> Ex: It is brazillian. </em>
+                <p> <strong> Contração: </strong> It's brazillian.</p>
+                <p> <strong> Negação: </strong> It's not brazillian.</p>
+                <p> <strong> Pergunta: </strong> Is it brazillian? </p>
+            </div>
+        </div>
+    </section>
+    <section class="exercicios">
+        <h1> </h1>
+        <fieldset class="exBloco">
+            <legend>
+                <h1> Complete a frase </h1>
+            </legend>
+
+            <div class="complete">
+                <p> You <input type="text" resposta="are"> a girl. </p>
+                <p> We <input type="text" resposta="are"> students. </p>
+                <p> She <input type="text" resposta="is"> my friend. </p>
+                <p> They <input type="text" resposta="are"> a couple. </p>
+                <p> <input type="text" resposta="are"> they brothers? </p>
+                <p> It <input type="text" resposta="is"> a beautiful day! </p>
+                <p> I <input type="text" resposta="am"> running. </p>
+            </div>
+        </fieldset>
+        <fieldset class="exBloco">
+            <legend>
+                <h1> Reescreva na forma negativa: </h1>
+            </legend>
+            <div>
+                <p> He is tall. <input type="text"> </p>
+                <p> They are angry. <input type="text"> </p>
+                <p> I am tired. <input type="text"> </p>
+                <p> You are ready. <input type="text"> </p>
+                <p> They are friends. <input type="text"> </p>
+                <p> Its sunny. <input type="text"> </p>
+                <p> He is my brother. <input type="text"> </p>
+            </div>
+        </fieldset>
+        <fieldset class="exBloco last">
+            <legend>
+                <h1> Rescreva como pergunta: </h1>
+            </legend>
+            <div>
+                <p> My fog is very small. <input type="text"> </p>
+                <p> Your parents are here <input type="text"> </p>
+                <p> They are in the garden. <input type="text"> </p>
+                <p> We are good friends. <input type="text"> </p>
+                <p> You are not a good student. <input type="text"> </p>
+                <p> He is a waiter. <input type="text"> </p>
+                <p> She is a teacher. <input type="text"> </p>
+            </div>
+        </fieldset>
+    </section>
+
+
+    <script>
+        const imgSom = document.querySelectorAll(".imgSom");
+        const audio = document.getElementsByClassName("audio");
+        const expandir = document.querySelectorAll(".expandir");
+
+        imgSom.forEach((img) => {
+            img.addEventListener("click", () => {
+                document.querySelectorAll(".audio").forEach(a => {
+                    a.currentTime = 0;
+                    a.pause();
+                });
+                document.querySelectorAll(".imgSom").forEach(i => {
+                    i.src = "assets/icons/som.png";
+                });
+
+                const audio = img.nextElementSibling;
+                audio.play();
+
+                img.src = "assets/icons/som2.png";
+            });
+        });
+
+        expandir.forEach((botao) => {
+            botao.addEventListener("click", (event) => {
+
+                const card = botao.closest(".card");
+                const content = card.querySelector(".card-content");
+
+                card.classList.toggle("card-expandido");
+                content.classList.toggle("content-expandido");
+            });
+        });
+
+        
+    </script>
+</body>
+
+</html>

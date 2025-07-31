@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo das aulas</title>
+    <link rel="icon" type="img/png" href="assets/icons/favicon.png">
+
+    <style>
+        .section::-webkit-scrollbar {
+            width: 7px;
+        }
+
+        .section::-webkit-scrollbar-track {
+            background: aliceblue;
+        }
+
+        .section::-webkit-scrollbar-thumb {
+            background: cornflowerblue;
+            border-radius: 5px;
+        }
+
+        body,
+        .section {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .section {
+            background-color: aliceblue;
+            height: 100vh;
+            font-family: 'Inter', 'Roboto', system-ui, -apple-system, sans-serif;
+            font-size: 1em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2em;
+            overflow-y: auto;
+        }
+
+        .titulo {
+            line-height: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .aulas {
+            margin-top: 3%;
+            display: grid;
+            grid-template-columns: repeat(3, 20vw);
+        }
+
+        .card {
+            font-weight: 500;
+            height: 15vh;
+            word-break: break-word;
+            text-align: center;
+            background-color: rgb(244, 247, 250);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 2.5em 2em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .card p {
+            margin-top: 0rem;
+            color: black;
+        }
+
+        .aulas a {
+            text-decoration: none;
+        }
+
+        .title {
+            color: rgb(0, 119, 255);
+            font-weight: 800;
+        }
+
+        .card:hover {
+            background-color: rgba(188, 217, 241, 0.785);
+        }
+
+        @media screen and (max-width: 900px) {
+            .aulas {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 700px) {
+            .aulas {
+                grid-template-columns: 1fr;
+            }
+
+            .titulo {
+                line-height: normal;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section inicio">
+        <div class="titulo">
+            <h1> Resumo das aulas </h1>
+            <p> O conteúdo a seguir é resultado das anotações feitas durante as aulas na Speakers Academy.</p>
+        </div>
+
+        <div class="aulas">
+            <a href="toBe.html" class="card">
+                <h4 class="title"> Ser/estar </h4>
+                <p> Linha do tempo do verbo to be </p>
+            </a>
+            <a href="can.html" class="card">
+                <h4 class = "title"> Poder/estar apto </h4>
+                <p> Linha do tempo do verbo can </p>
+            </a>
+            <a href="simple.html" class="card">
+                <h4 class = "title"> Sentença simples </h4>
+                <p> Linha do tempo dos verbos do e does </p>
+            </a>
+            <a href="verbosTipos.html" class="card">
+                <h4 class = "title"> Verbos regulares e irregulares </h4>
+                <p> Regras importantes e exemplos </p>
+            </a>
+            <a href="pronomes.html" class="card">
+                <h4 class = "title"> Pronomes </h4>
+                <p> Pronomes e suas variações </p>
+            </a>
+            <a href="perguntas.html" class="card">
+                <h4 class = "title"> Perguntas com WH </h4>
+                <p> Dicas ao fazer perguntas </p>
+            </a>
+            <a href="tempo.html" class="card">
+                <h4 class = "title"> Vocabulário: tempo </h4>
+                <p> Números, dias, semanas e meses </p>
+            </a>
+            <a href="preposicoes.html" class="card">
+                <h4 class = "title"> Preposições </h4>
+                <p> In, at e on </p>
+            </a>
+            <a href="adverbios.html" class="card">
+                <h4 class = "title"> Advérbios </h4>
+                <p> os advérbios e suas variações </p>
+            </a>
+            <a href="infGerundio.html" class="card">
+                <h4 class = "title"> Infinitivo e gerúndio </h4>
+                <p> Afinal, qual a diferença? </p>
+            </a>
+            <a href="willGoingTo.html" class="card">
+                <h4 class = "title"> Will e going to </h4>
+                <p> Exemplos de quando usar </p>
+            </a>
+            <a href="comparacoes" class="card">
+                <h4 class = "title"> Comparisons </h4>
+                <p> Como fazer comparações? </p>
+            </a>
+            <a href="justOnly" class="card">
+                <h4 class = "title"> Just e only </h4>
+                <p> Saiba diferenciar </p>
+            </a>
+            <a href="soToo" class="card">
+                <h4 class = "title"> So e too </h4>
+                <p> Saiba diferenciar </p>
+            </a>
+            <a href="falar" class="card">
+                <h4 class = "title"> Formas de "falar" </h4>
+                <p> Speak, tell, say e talk </p>
+            </a>
+            <a href="posse" class="card">
+                <h4 class = "title"> Of e s' </h4>
+                <p> Saiba diferenciar </p>
+            </a>
+            <a href="make" class="card">
+                <h4 class = "title"> Make </h4>
+                <p> Como usar e qual a diferença de do? </p>
+            </a>
+            <a href="have" class="card">
+                <h4 class = "title"> Have </h4>
+                <p> Diferentes significados </p>
+            </a>
+            <a href="hell" class="card">
+                <h4 class = "title"> Hell </h4>
+                <p> Como usar? </p>
+            </a>
+            <a href="up" class="card">
+                <h4 class = "title"> Up </h4>
+                <p> Diferentes significados </p>
+            </a>
+            <a href="some" class="card">
+                <h4 class = "title"> Some </h4>
+                <p> Como usar? </p>
+            </a>
+            <a href="agreeDesagree" class="card">
+                <h4 class = "title"> Agree e desagree </h4>
+                <p> Como usar concordancia e discordancia em inglês </p>
+            </a>
+            <a href="aindaJa" class="card">
+                <h4 class = "title"> Still, already e yet </h4>
+                <p> Saiba diferenciar </p>
+            </a>
+            <a href="contrastes" class="card">
+                <h4 class = "title"> Contrastes </h4>
+                <p> Entendendo os contrastes no inglês </p>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
