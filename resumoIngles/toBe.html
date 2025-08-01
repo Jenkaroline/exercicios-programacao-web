@@ -60,10 +60,9 @@
             display: none;
         }
 
-
         .content-expandido {
             display: block;
-            height: 10em;
+            height: 35em;
         }
 
         .top {
@@ -72,8 +71,9 @@
             justify-content: space-between;
         }
 
-        .top strong {
+        .titleCard {
             font-size: larger;
+            color: rgb(0, 136, 255);
         }
 
         .top button {
@@ -81,38 +81,82 @@
             border: none;
         }
 
-
         .card img {
             width: 1.5rem;
             cursor: pointer;
         }
 
         /* exercicios */
-
         .exBloco {
             display: flex;
             flex-direction: column;
             align-items: start;
             color: beige;
             width: 80vw;
-            padding-left: 2em;
-        }
-        .last{
+            padding: 2em;
             margin-bottom: 2em;
+            border: 2px solid rgba(243, 231, 255, 0.3);
+            border-radius: 8px;
         }
-        .exBloco input{
+
+        .exBloco legend {
+            padding: 0 1em;
+        }
+
+        .exBloco legend h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .exBloco input {
             border-radius: 4px;
             border: solid 1px blue;
+            padding: 0.5em;
+            margin: 0 0.5em;
+        }
+
+        .exBloco button {
+            background-color: rgb(249, 253, 255);
+            color: rgb(35, 50, 63);
+            border: none;
+            width: 7em;
+            height: 2em;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 1em;
+        }
+
+        .exBloco button:hover {
+            background-color: rgb(230, 240, 250);
+        }
+
+        .questao {
+            margin: 1em 0;
+            font-size: 1.1em;
+        }
+
+        .certo {
+            color: #00ff00;
+            font-weight: bold;
+        }
+
+        .errado {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        .feedback {
+            margin-left: 1em;
         }
     </style>
 </head>
 
 <body id="body">
     <section class="conteudo">
-        <h1> Verbo to be: ser e estar </h1>
+        <h1> Verbo to be </h1>
         <div class="card">
             <div class="top">
-                <strong> I am </strong>
+                <strong class="titleCard"> I am </strong>
                 <div>
                     <button type="button">
                         <img src="assets/icons/som.png" class="imgSom" alt="Ouvir">
@@ -128,11 +172,21 @@
                 <p> <strong> Contração: </strong> I'm brazillian.</p>
                 <p> <strong> Negação: </strong> I'm not brazillian.</p>
                 <p> <strong> Pergunta: </strong> Am i brazillian? </p>
+                <strong class="titleCard"> Passado: I was </strong>
+                <p> <em> Ex: I was sad. </em> </p>
+                <p> <strong> Negação: </strong> I was not sad.</p>
+                <p> <strong> Contração: </strong> I wasn't sad. </p>
+                <p> <strong> Pergunta: </strong> Was i sad? </p>
+                <strong class="titleCard"> Futuro: I will </strong>
+                <p> <em> Ex: I will dance. </em> </p>
+                <p> <strong> Negação: </strong> I will not dance.</p>
+                <p> <strong> Contração: </strong> I won't dance. </p>
+                <p> <strong> Pergunta: </strong> Will i dance?? </p>
             </div>
         </div>
         <div class="card">
             <div class="top">
-                <strong> You are </strong>
+                <strong class="titleCard"> You are </strong>
                 <div>
                     <button type="button">
                         <img src="assets/icons/som.png" class="imgSom" alt="Ouvir">
@@ -144,15 +198,24 @@
                 </div>
             </div>
             <div class="card-content">
-                <em> Ex: You are brazillian. </em>
-                <p> <strong> Contração: </strong> You're brazillian(s).</p>
-                <p> <strong> Negação: </strong> You aren't brazillian(s).</p>
-                <p> <strong> Pergunta: </strong> Are you brazillian(s)? </p>
+                <em> Ex: You are sad. </em>
+                <p> <strong> Contração: </strong> You're sad.</p>
+                <p> <strong> Negação: </strong> You aren't sad.</p>
+                <p> <strong> Pergunta: </strong> Are you sad? </p>
+                <strong class="titleCard"> Passado: You were </strong>
+                <p> <em> Ex: You were sad. </em> </p>
+                <p> <strong> Negação: </strong> You were not sad.</p>
+                <p> <strong> Contração: </strong> You weren't sad. </p>
+                <p> <strong> Pergunta: </strong> Were you sad? </p>
+                <strong class="titleCard"> Futuro: You will </strong>
+                <p> <em> Ex: You will be sad. </em> </p>
+                <p> <strong> Negação: </strong> You won't be sad.</p>
+                <p> <strong> Pergunta: </strong> Will you be sad? </p>
             </div>
         </div>
         <div class="card">
             <div class="top">
-                <strong> We are </strong>
+                <strong class="titleCard"> We are </strong>
                 <div>
                     <button type="button">
                         <img src="assets/icons/som.png" class="imgSom" alt="Ouvir">
@@ -164,15 +227,25 @@
                 </div>
             </div>
             <div class="card-content">
-                <em> Ex: We are brazillian. </em>
-                <p> <strong> Contração: </strong> We're brazillians.</p>
-                <p> <strong> Negação: </strong> We aren't brazillians.</p>
-                <p> <strong> Pergunta: </strong> Are we brazillians? </p>
+                <em> Ex: We are togheter. </em>
+                <p> <strong> Contração: </strong> We're togheter.</p>
+                <p> <strong> Negação: </strong> We aren't togheter.</p>
+                <p> <strong> Pergunta: </strong> Are we togheter? </p>
+                <strong class="titleCard"> Passado: We were </strong>
+                <p> <em> Ex: We were togheter. </em> </p>
+                <p> <strong> Negação: </strong> We were not togheter.</p>
+                <p> <strong> Contração: </strong> We weren't togheter.</p>
+                <p> <strong> Pergunta: </strong> Were we togheter? </p>
+                <strong class="titleCard"> Futuro: We will </strong>
+                <p> <em> Ex: We will be togheter. </em> </p>
+                <p> <strong> Contração: </strong> We'll be togheter. </p>
+                <p> <strong> Negação: </strong> We won't be togheter.</p>
+                <p> <strong> Pergunta: </strong> Will we be togheter? </p>
             </div>
         </div>
         <div class="card">
             <div class="top">
-                <strong> They are </strong>
+                <strong class="titleCard"> They are </strong>
                 <div>
                     <button type="button">
                         <img src="assets/icons/som.png" class="imgSom" alt="Ouvir">
@@ -184,15 +257,25 @@
                 </div>
             </div>
             <div class="card-content">
-                <em> Ex: They are brazillian. </em>
-                <p> <strong> Contração: </strong> They're brazillians.</p>
-                <p> <strong> Negação: </strong> They aren't brazillians.</p>
-                <p> <strong> Pergunta: </strong> Are they brazillians? </p>
+                <em> Ex: They are alone. </em>
+                <p> <strong> Contração: </strong> They're alone.</p>
+                <p> <strong> Negação: </strong> They aren't alone.</p>
+                <p> <strong> Pergunta: </strong> Are they alone? </p>
+                <strong class="titleCard"> Passado: They were </strong>
+                <p> <em> Ex: They were alone. </em> </p>
+                <p> <strong> Negação: </strong> They were not alone.</p>
+                <p> <strong> Contração: </strong> They weren't alone.</p>
+                <p> <strong> Pergunta: </strong> Were they alone? </p>
+                <strong class="titleCard"> Passado: They will </strong>
+                <p> <em> Ex: They will be alone. </em> </p>
+                <p> <strong> Contração: </strong> They'll be alone.</p>
+                <p> <strong> Negação: </strong> They won't be alone.</p>
+                <p> <strong> Pergunta: </strong> Will they be alone? </p>
             </div>
         </div>
         <div class="card">
             <div class="top">
-                <strong> He is </strong>
+                <strong class="titleCard"> He is </strong>
                 <div>
                     <button type="button">
                         <img src="assets/icons/som.png" class="imgSom" alt="Ouvir">
@@ -204,15 +287,25 @@
                 </div>
             </div>
             <div class="card-content">
-                <em> Ex: He is brazillian. </em>
-                <p> <strong> Contração: </strong> He's brazillian.</p>
-                <p> <strong> Negação: </strong> He ins't brazillian.</p>
-                <p> <strong> Pergunta: </strong> Is he brazillian? </p>
+                <em> Ex: He is a good singer. </em>
+                <p> <strong> Contração: </strong> He's a good singer.</p>
+                <p> <strong> Negação: </strong> He ins't a good singer.</p>
+                <p> <strong> Pergunta: </strong> Is he a good singer? </p>
+                <strong class="titleCard"> Passado: He was </strong>
+                <p> <em> Ex: He was a good singer. </em> </p>
+                <p> <strong> Negação: </strong> He was not a good singer.</p>
+                <p> <strong> Contração: </strong> He wasn't a good singer.</p>
+                <p> <strong> Pergunta: </strong> Was he a good singer? </p>
+                <strong class="titleCard"> Futuro: He will be </strong>
+                <p> <em> Ex: He will be a good singer. </em> </p>
+                <p> <strong> Contração: </strong> He'll be a good singer.</p>
+                <p> <strong> Negação: </strong> He won't be a good singer.</p>
+                <p> <strong> Pergunta: </strong> Will he be a good singer? </p>
             </div>
         </div>
         <div class="card">
             <div class="top">
-                <strong> She is </strong>
+                <strong class="titleCard"> She is </strong>
                 <div>
                     <button type="button">
                         <img src="assets/icons/som.png" class="imgSom" alt="Ouvir">
@@ -224,15 +317,26 @@
                 </div>
             </div>
             <div class="card-content">
-                <em> Ex: She is brazillian. </em>
-                <p> <strong> Contração: </strong> She's brazillian.</p>
-                <p> <strong> Negação: </strong> She isn't brazillian.</p>
-                <p> <strong> Pergunta: </strong> Is he brazillian? </p>
+                <em> Ex: She is dancing. </em>
+                <p> <strong> Contração: </strong> She's dancing.</p>
+                <p> <strong> Negação: </strong> She isn't dancing.</p>
+                <p> <strong> Pergunta: </strong> Is she dancing? </p>
+                <strong class="titleCard"> Passado: She was </strong>
+                <p> <em> Ex: She was dancing. </em> </p>
+                <p> <strong> Negação: </strong> She was not dancing.</p>
+                <p> <strong> Contração: </strong> She wasn't dancing.</p>
+                <p> <strong> Pergunta: </strong> Was she dancing? </p>
+                <strong class="titleCard"> Futuro: She will </strong>
+                <p> <em> Ex: She will dance. </em> </p>
+                <p> <strong> Contração: </strong> She'll dance.</p>
+                <p> <strong> Negação: </strong> She won't dance.</p>
+                <p> <strong> Pergunta: </strong> Will she dance? </p>
+
             </div>
         </div>
         <div class="card">
             <div class="top">
-                <strong> It is </strong>
+                <strong class="titleCard"> It is </strong>
                 <div>
                     <button type="button">
                         <img src="assets/icons/som.png" class="imgSom" alt="Ouvir">
@@ -244,66 +348,308 @@
                 </div>
             </div>
             <div class="card-content">
-                <em> Ex: It is brazillian. </em>
-                <p> <strong> Contração: </strong> It's brazillian.</p>
-                <p> <strong> Negação: </strong> It's not brazillian.</p>
-                <p> <strong> Pergunta: </strong> Is it brazillian? </p>
+                <em> Ex: It is funny. </em>
+                <p> <strong> Contração: </strong> It's funny.</p>
+                <p> <strong> Negação: </strong> It isn't funny.</p>
+                <p> <strong> Pergunta: </strong> Is it funny? </p>
+                <strong class="titleCard"> Passado: It was </strong>
+                <p> <em> Ex: It was funny. </em> </p>
+                <p> <strong> Negação: </strong> It was not funny.</p>
+                <p> <strong> Contração: </strong> It wasn't funny.</p>
+                <p> <strong> Pergunta: </strong> Was it funny? </p>
+                <strong class="titleCard"> Futuro: It will </strong>
+                <p> <em> Ex: It will be funny. </em> </p>
+                <p> <strong> Contração: </strong> It'll be funny.</p>
+                <p> <strong> Negação: </strong> It won't be funny.</p>
+                <p> <strong> Pergunta: </strong> Will it be funny? </p>
             </div>
         </div>
     </section>
-    <section class="exercicios">
-        <h1> </h1>
-        <fieldset class="exBloco">
-            <legend>
-                <h1> Complete a frase </h1>
-            </legend>
 
-            <div class="complete">
-                <p> You <input type="text" resposta="are"> a girl. </p>
-                <p> We <input type="text" resposta="are"> students. </p>
-                <p> She <input type="text" resposta="is"> my friend. </p>
-                <p> They <input type="text" resposta="are"> a couple. </p>
-                <p> <input type="text" resposta="are"> they brothers? </p>
-                <p> It <input type="text" resposta="is"> a beautiful day! </p>
-                <p> I <input type="text" resposta="am"> running. </p>
-            </div>
-        </fieldset>
+    <section class="exercicios">
+        <!-- Exercício 1: Complete a frase -->
         <fieldset class="exBloco">
             <legend>
-                <h1> Reescreva na forma negativa: </h1>
+                <h1>Complete a frase</h1>
             </legend>
-            <div>
-                <p> He is tall. <input type="text"> </p>
-                <p> They are angry. <input type="text"> </p>
-                <p> I am tired. <input type="text"> </p>
-                <p> You are ready. <input type="text"> </p>
-                <p> They are friends. <input type="text"> </p>
-                <p> Its sunny. <input type="text"> </p>
-                <p> He is my brother. <input type="text"> </p>
-            </div>
+            <div class="questionario-completar"></div>
+            <button onclick="verificarCompletar()">Corrigir</button>
+            <button onclick="mostrarCompletar()">Mostrar</button>
         </fieldset>
-        <fieldset class="exBloco last">
+
+        <!-- Exercício 2: Forma negativa -->
+        <fieldset class="exBloco">
             <legend>
-                <h1> Rescreva como pergunta: </h1>
+                <h1>Reescreva na forma negativa</h1>
             </legend>
-            <div>
-                <p> My fog is very small. <input type="text"> </p>
-                <p> Your parents are here <input type="text"> </p>
-                <p> They are in the garden. <input type="text"> </p>
-                <p> We are good friends. <input type="text"> </p>
-                <p> You are not a good student. <input type="text"> </p>
-                <p> He is a waiter. <input type="text"> </p>
-                <p> She is a teacher. <input type="text"> </p>
-            </div>
+            <div class="questionario-negativo"></div>
+            <button onclick="verificarNegativo()">Corrigir</button>
+        </fieldset>
+
+        <!-- Exercício 3: Forma interrogativa -->
+        <fieldset class="exBloco">
+            <legend>
+                <h1>Reescreva como pergunta</h1>
+            </legend>
+            <div class="questionario-pergunta"></div>
+            <button onclick="verificarPergunta()">Corrigir</button>
         </fieldset>
     </section>
 
-
     <script>
         const imgSom = document.querySelectorAll(".imgSom");
-        const audio = document.getElementsByClassName("audio");
         const expandir = document.querySelectorAll(".expandir");
 
+        // Perguntas para completar
+        const perguntasCompletar = [{
+                frase: "I ___ so sad! (presente)",
+                resposta: "am"
+            },
+            {
+                frase: "I ___ an artist (passado)",
+                resposta: "was"
+            },
+            {
+                frase: "I ___ reading a book! (presente)",
+                resposta: "am"
+            },
+            {
+                frase: "You ___ just a boy (presente)",
+                resposta: "are"
+            },
+            {
+                frase: "You ___ so diferent! (passado)",
+                resposta: "were"
+            },
+            {
+                frase: "You ___ a good mother (futuro)",
+                resposta: "will be"
+            },
+            {
+                frase: "We ___ students (presente)",
+                resposta: "are"
+            },
+            {
+                frase: "We ___ a couple (passado)",
+                resposta: "were"
+            },
+            {
+                frase: "We ___ write a book togheter (futuro)",
+                resposta: "will"
+            },
+            {
+                frase: "They ___ brothers (presente)",
+                resposta: "are"
+            },
+            {
+                frase: "They ___ my teachers (passado)",
+                resposta: "were"
+            },
+            {
+                frase: "They ___ leave the city (futuro)",
+                resposta: "will"
+            },
+            {
+                frase: "She ___ my friend (presente)",
+                resposta: "is"
+            },
+            {
+                frase: "She ___ talking (passado)",
+                resposta: "was"
+            },
+            {
+                frase: "She ___ understand (futuro)",
+                resposta: "will"
+            },
+            {
+                frase: "He ___ my father (presente)",
+                resposta: "is"
+            },
+            {
+                frase: "She ___ alone (passado)",
+                resposta: "was"
+            },
+            {
+                frase: "She ___ cry (futuro)",
+                resposta: "will"
+            },
+            {
+                frase: "It ___ true (passado)",
+                resposta: "is"
+            },
+            {
+                frase: "It ___ wrong (passado)",
+                resposta: "was"
+            },
+            {
+                frase: "It ___ rainning (futuro)",
+                resposta: "will"
+            }
+        ];
+
+        // Perguntas para forma negativa
+        const perguntasNegativo = [{
+                frase: "I'm Brazilian",
+                resposta: "I am not Brazilian"
+            },
+            {
+                frase: "I was a teacher",
+                resposta: "I was not a teacher"
+            },
+            {
+                frase: "I will be busy",
+                resposta: "I will not be busy"
+            },
+            {
+                frase: "You are friends",
+                resposta: "You are not friends"
+            },
+            {
+                frase: "You were drivers",
+                resposta: "You were not drivers"
+            },
+            {
+                frase: "You'll be fat",
+                resposta: "You will not be fat"
+            },
+            {
+                frase: "They are students",
+                resposta: "They are not students"
+            },
+            {
+                frase: "They were dancing",
+                resposta: "They were not dancing"
+            },
+            {
+                frase: "They will know",
+                resposta: "They will not know"
+            },
+            {
+                frase: "We are tired",
+                resposta: "We are not tired"
+            },
+            {
+                frase: "We were tired",
+                resposta: "We were not tired"
+            },
+            {
+                frase: "We will be tired",
+                resposta: "We will be not tired"
+            },
+            {
+                frase: "He is happy",
+                resposta: "He is not happy"
+            },
+            {
+                frase: "He was happy",
+                resposta: "He was not happy"
+            },
+            {
+                frase: "He will be happy",
+                resposta: "He will be not happy"
+            },
+            {
+                frase: "It is cold",
+                resposta: "It is not cold"
+            },
+            {
+                frase: "It was cold",
+                resposta: "It was not cold"
+            },
+            {
+                frase: "It will be cold",
+                resposta: "It will not be cold"
+            },
+            {
+                frase: "She is tall",
+                resposta: "She is not tall"
+            },
+            {
+                frase: "She was fat",
+                resposta: "She was not fat"
+            },
+            {
+                frase: "She will sing",
+                resposta: "She will not sing"
+            }
+        ];
+
+        // Perguntas para forma interrogativa
+        const perguntasPergunta = [{
+                frase: "You are ready",
+                resposta: "Are you ready?"
+            },
+            {
+                frase: "You was sick",
+                resposta: "was you sick?"
+            },
+            {
+                frase: "You will dance",
+                resposta: "will you dance?"
+            },
+            {
+                frase: "I am here",
+                resposta: "i am here?"
+            },
+            {
+                frase: "I was tired",
+                resposta: "was i tired?"
+            },
+            {
+                frase: "I will cry",
+                resposta: "will i cry?"
+            },
+            {
+                frase: "She is pretty",
+                resposta: "Is she pretty?"
+            },
+            {
+                frase: "She was driving",
+                resposta: "was she driving?"
+            },
+            {
+                frase: "She will like",
+                resposta: "will she like?"
+            },
+            {
+                frase: "We are late",
+                resposta: "Are we late?"
+            },
+            {
+                frase: "We were late",
+                resposta: "Were we late?"
+            },
+            {
+                frase: "We will be ok",
+                resposta: "will we be ok?"
+            },
+            {
+                frase: "They are coming",
+                resposta: "Are they coming?"
+            },
+            {
+                frase: "They were leave",
+                resposta: "were they leave?"
+            },
+            {
+                frase: "They will leave togheter",
+                resposta: "will they leave togheter?"
+            },
+            {
+                frase: "He is busy",
+                resposta: "Is he busy?"
+            },
+            {
+                frase: "He was correct",
+                resposta: "was he correct?"
+            },
+            {
+                frase: "It is working",
+                resposta: "Is it working?"
+            }
+        ];
+
+        // Eventos para áudio e expansão dos cards
         imgSom.forEach((img) => {
             img.addEventListener("click", () => {
                 document.querySelectorAll(".audio").forEach(a => {
@@ -315,15 +661,15 @@
                 });
 
                 const audio = img.nextElementSibling;
-                audio.play();
-
-                img.src = "assets/icons/som2.png";
+                if (audio && audio.tagName === 'AUDIO') {
+                    audio.play();
+                    img.src = "assets/icons/som2.png";
+                }
             });
         });
 
         expandir.forEach((botao) => {
             botao.addEventListener("click", (event) => {
-
                 const card = botao.closest(".card");
                 const content = card.querySelector(".card-content");
 
@@ -332,7 +678,164 @@
             });
         });
 
-        
+        /* questionario */
+
+        function embaralhar(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        function gerarQuestionarioCompletar() {
+            embaralhar(perguntasCompletar);
+            const container = document.querySelector(".questionario-completar");
+            container.innerHTML = "";
+
+            perguntasCompletar.slice(0, 5).forEach((pergunta, index) => {
+                const div = document.createElement("div");
+                div.className = "questao";
+                div.innerHTML = `
+                    <label>
+                        ${pergunta.frase.replace("___", `<input type="text" id="completar${index}">`)}
+                    </label>
+                    <span id="feedback-completar${index}" class="feedback"></span>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        // Gerar questionário negativo
+        function gerarQuestionarioNegativo() {
+            embaralhar(perguntasNegativo);
+            const container = document.querySelector(".questionario-negativo");
+            container.innerHTML = "";
+
+            perguntasNegativo.slice(0, 5).forEach((pergunta, index) => {
+                const div = document.createElement("div");
+                div.className = "questao";
+                div.innerHTML = `
+                    <label>
+                        ${pergunta.frase}: <input type="text" id="negativo${index}">
+                    </label>
+                    <span id="feedback-negativo${index}" class="feedback"></span>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        // Gerar questionário de pergunta
+        function gerarQuestionarioPergunta() {
+            embaralhar(perguntasPergunta);
+            const container = document.querySelector(".questionario-pergunta");
+            container.innerHTML = "";
+
+            perguntasPergunta.slice(0, 5).forEach((pergunta, index) => {
+                const div = document.createElement("div");
+                div.className = "questao";
+                div.innerHTML = `
+                    <label>
+                        ${pergunta.frase}: <input type="text" id="pergunta${index}">
+                    </label>
+                    <span id="feedback-pergunta${index}" class="feedback"></span>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        // Verificar respostas - Completar
+        function verificarCompletar() {
+
+            perguntasCompletar.slice(0, 5).forEach((pergunta, index) => {
+                const input = document.getElementById(`completar${index}`);
+                const feedback = document.getElementById(`feedback-completar${index}`);
+
+                if (input && feedback) {
+                    const respostaUsuario = input.value.trim().toLowerCase();
+                    const respostaCorreta = pergunta.resposta.toLowerCase();
+
+                    if (respostaCorreta === respostaUsuario) {
+                        feedback.textContent = "✅";
+                        feedback.className = "feedback certo";
+                    } else {
+                        feedback.textContent = `❌ (${pergunta.resposta})`;
+                        feedback.className = "feedback errado";
+                    }
+                }
+            })
+        };
+
+
+        /*
+                            if (respostaUsuario === respostaCorreta) {
+                                    feedback.textContent = "✅";
+                                    feedback.className = "feedback certo";
+                                } else {
+                                    chances--;
+                                    feedback.textContent = `❌`;
+                                    feedback.className = "feedback errado";
+
+                                    if (chances < 0) {
+                                        feedback.textContent = `❌ (${pergunta.resposta})`;
+                                        feedback.className = "feedback errado";
+                                    }
+
+                            }
+        */
+
+
+        // Verificar respostas - Negativo
+        function verificarNegativo() {
+            perguntasNegativo.slice(0, 5).forEach((pergunta, index) => {
+                const input = document.getElementById(`negativo${index}`);
+                const feedback = document.getElementById(`feedback-negativo${index}`);
+
+                if (input && feedback) {
+                    const respostaUsuario = input.value.trim().toLowerCase();
+                    const respostaCorreta = pergunta.resposta.toLowerCase();
+
+                    if (respostaUsuario === respostaCorreta ||
+                        respostaUsuario === respostaCorreta.replace('i am', "i'm").replace('is not', "isn't")
+                        .replace('are not',
+                            "aren't").replace("was not", "wasn't").replace("were not", "weren't").replace(
+                            "will not", "won't")) {
+                        feedback.textContent = "✅";
+                        feedback.className = "feedback certo";
+                    } else {
+                        feedback.textContent = `❌ (${pergunta.resposta})`;
+                        feedback.className = "feedback errado";
+                    }
+                }
+            });
+        }
+
+        // Verificar respostas - Pergunta
+        function verificarPergunta() {
+            perguntasPergunta.slice(0, 5).forEach((pergunta, index) => {
+                const input = document.getElementById(`pergunta${index}`);
+                const feedback = document.getElementById(`feedback-pergunta${index}`);
+
+                if (input && feedback) {
+                    const respostaUsuario = input.value.trim().toLowerCase();
+                    const respostaCorreta = pergunta.resposta.toLowerCase();
+
+                    if (respostaUsuario === respostaCorreta) {
+                        feedback.textContent = "✅";
+                        feedback.className = "feedback certo";
+                    } else {
+                        feedback.textContent = `❌ (${pergunta.resposta})`;
+                        feedback.className = "feedback errado";
+                    }
+                }
+            });
+        }
+
+        // Inicializar quando a página carregar
+        window.onload = function () {
+            gerarQuestionarioCompletar();
+            gerarQuestionarioNegativo();
+            gerarQuestionarioPergunta();
+        };
     </script>
 </body>
 
