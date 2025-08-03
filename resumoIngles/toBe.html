@@ -372,9 +372,9 @@
             <legend>
                 <h1>Complete a frase</h1>
             </legend>
+            <em class="chancesComp"> Você tem 3 chances. </em>
             <div class="questionario-completar"></div>
             <button onclick="verificarCompletar()">Corrigir</button>
-            <button onclick="mostrarCompletar()">Mostrar</button>
         </fieldset>
 
         <!-- Exercício 2: Forma negativa -->
@@ -382,6 +382,7 @@
             <legend>
                 <h1>Reescreva na forma negativa</h1>
             </legend>
+            <em class="chancesNeg"> Você tem 3 chances. </em>
             <div class="questionario-negativo"></div>
             <button onclick="verificarNegativo()">Corrigir</button>
         </fieldset>
@@ -391,6 +392,7 @@
             <legend>
                 <h1>Reescreva como pergunta</h1>
             </legend>
+            <em class="chancesPerg"> Você tem 3 chances. </em>
             <div class="questionario-pergunta"></div>
             <button onclick="verificarPergunta()">Corrigir</button>
         </fieldset>
@@ -399,6 +401,10 @@
     <script>
         const imgSom = document.querySelectorAll(".imgSom");
         const expandir = document.querySelectorAll(".expandir");
+        let chancesComp = document.querySelector(".chancesComp");
+        let chancesNeg = document.querySelector(".chancesNeg");
+        let chancesPerg = document.querySelector(".chancesPerg");
+        let chances = 3;
 
         // Perguntas para completar
         const perguntasCompletar = [{
@@ -743,7 +749,6 @@
             });
         }
 
-        // Verificar respostas - Completar
         function verificarCompletar() {
 
             perguntasCompletar.slice(0, 5).forEach((pergunta, index) => {
@@ -755,33 +760,24 @@
                     const respostaCorreta = pergunta.resposta.toLowerCase();
 
                     if (respostaCorreta === respostaUsuario) {
-                        feedback.textContent = "✅";
+                        feedback.textContent = `✅`;
                         feedback.className = "feedback certo";
                     } else {
-                        feedback.textContent = `❌ (${pergunta.resposta})`;
+                        feedback.textContent = `❌`;
                         feedback.className = "feedback errado";
                     }
                 }
             })
-        };
 
-
-        /*
-                            if (respostaUsuario === respostaCorreta) {
-                                    feedback.textContent = "✅";
-                                    feedback.className = "feedback certo";
-                                } else {
-                                    chances--;
-                                    feedback.textContent = `❌`;
-                                    feedback.className = "feedback errado";
-
-                                    if (chances < 0) {
-                                        feedback.textContent = `❌ (${pergunta.resposta})`;
-                                        feedback.className = "feedback errado";
-                                    }
-
-                            }
-        */
+            if (chances > 1) {
+                chances--;
+                chancesComp.textContent = `Você tem ${chances} chances.`;
+            } else {
+                chancesComp.textContent = `Você errou! Tente novamente.`;
+                gerarQuestionarioCompletar();
+                chances = 3; // Resetar chances
+            }
+        }
 
 
         // Verificar respostas - Negativo
@@ -794,19 +790,24 @@
                     const respostaUsuario = input.value.trim().toLowerCase();
                     const respostaCorreta = pergunta.resposta.toLowerCase();
 
-                    if (respostaUsuario === respostaCorreta ||
-                        respostaUsuario === respostaCorreta.replace('i am', "i'm").replace('is not', "isn't")
-                        .replace('are not',
-                            "aren't").replace("was not", "wasn't").replace("were not", "weren't").replace(
-                            "will not", "won't")) {
-                        feedback.textContent = "✅";
+                    if (respostaUsuario === respostaCorreta || respostaUsuario === respostaCorreta.replace('i am', "i'm").replace('is not', "isn't").replace('are not',"aren't").replace("was not", "wasn't").replace("were not", "weren't").replace("will not", "won't")) {
+                        feedback.textContent = `✅`;
                         feedback.className = "feedback certo";
                     } else {
-                        feedback.textContent = `❌ (${pergunta.resposta})`;
+                        feedback.textContent = `❌`;
                         feedback.className = "feedback errado";
                     }
                 }
-            });
+            })
+
+            if (chances > 1) {
+                chances--;
+                chancesNeg.textContent = `Você tem ${chances} chances.`;
+            } else {
+                chancesNeg.textContent = `Você errou! Tente novamente.`;
+                gerarQuestionarioNegativo();
+                chances = 3;
+            }
         }
 
         // Verificar respostas - Pergunta
@@ -823,11 +824,20 @@
                         feedback.textContent = "✅";
                         feedback.className = "feedback certo";
                     } else {
-                        feedback.textContent = `❌ (${pergunta.resposta})`;
+                        feedback.textContent = `❌`;
                         feedback.className = "feedback errado";
                     }
                 }
-            });
+            })
+
+            if (chances > 1) {
+                chances--;
+                chancesPerg.textContent = `Você tem ${chances} chances.`;
+            } else {
+                chancesPerg.textContent = `Você errou! Tente novamente.`;
+                gerarQuestionarioPergunta();
+                chances = 3; // Resetar chances
+            }
         }
 
         // Inicializar quando a página carregar
