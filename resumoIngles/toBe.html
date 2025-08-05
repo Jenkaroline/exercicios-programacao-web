@@ -148,12 +148,29 @@
         .feedback {
             margin-left: 1em;
         }
+
+        .topo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 1em;
+            gap: 1em;
+        }
+
+        .topo img {
+            cursor: pointer;
+            width: 2em;
+        }
     </style>
 </head>
 
 <body id="body">
     <section class="conteudo">
-        <h1> Verbo to be </h1>
+        <div class="topo">
+            <a href="index.html"> <img src="assets/icons/voltar.png" alt="Logo" width="100"> </a>
+            <h1> Verbo to be </h1>
+        </div>
         <div class="card">
             <div class="top">
                 <strong class="titleCard"> I am </strong>
@@ -790,7 +807,9 @@
                     const respostaUsuario = input.value.trim().toLowerCase();
                     const respostaCorreta = pergunta.resposta.toLowerCase();
 
-                    if (respostaUsuario === respostaCorreta || respostaUsuario === respostaCorreta.replace('i am', "i'm").replace('is not', "isn't").replace('are not',"aren't").replace("was not", "wasn't").replace("were not", "weren't").replace("will not", "won't")) {
+                    if (respostaUsuario === respostaCorreta || respostaUsuario === respostaCorreta.replace(
+                            'i am', "i'm").replace('is not', "isn't").replace('are not', "aren't").replace(
+                            "was not", "wasn't").replace("were not", "weren't").replace("will not", "won't")) {
                         feedback.textContent = `✅`;
                         feedback.className = "feedback certo";
                     } else {
