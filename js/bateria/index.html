@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bateria</title>
+    <style>
+        body {
+            background-color: rgba(127, 255, 212, 0.368);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+
+        .bateria {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        input {
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+
+        .teclas {
+            padding: 2em;
+            margin: 2px;
+            background-color: rgb(137, 192, 192);
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Bateria </h1>
+    <div class="bateria">
+        <div class="teclas">
+            <p class="letra">Q</p>
+            <audio class="audio" src="audios/Q.mp3"></audio>
+        </div>
+        <div class="teclas">
+            <p class="letra">W</p>
+            <audio class="audio" src="audios/W.mp3"></audio>
+        </div>
+        <div class="teclas">
+            <p class="letra">E</p>
+            <audio class="audio" src="audios/E.mp3"></audio>
+        </div>
+        <div class="teclas">
+            <p class="letra">A</p>
+            <audio class="audio" src="audios/A.mp3"></audio>
+        </div>
+        <div class="teclas">
+            <p class="letra">S</p>
+            <audio class="audio" src="audios/S.mp3"></audio>
+        </div>
+        <div class="teclas">
+            <p class="letra">D</p>
+            <audio class="audio" src="audios/D.mp3"></audio>
+        </div>
+        <div class="teclas">
+            <p class="letra">A</p>
+            <audio class="audio" src="audios/A.mp3"></audio>
+        </div>
+        <div class="teclas">
+            <p class="letra">S</p>
+            <audio class="audio" src="audios/S.mp3"></audio>
+        </div>
+        <div class="teclas">
+            <p class="letra">D</p>
+            <audio class="audio" src="audios/D.mp3"></audio>
+        </div>
+    </div>
+    <input placeholder="Faça sua composição" type="text">
+    <button> Tocar </button>
+
+    <script>
+        teclas = document.querySelectorAll(".teclas");
+
+        teclas.forEach((tecla) => {
+            tecla.addEventListener("click", () => {
+                tecla.style.backgroundColor = "blue";
+
+                audio = tecla.querySelector(".audio");
+                audio.play();
+
+                let l = tecla.querySelector(".letra");
+                let letra = l.textContent;
+            });
+/*
+            document.addEventListener("keydown", (e) => {
+                if (e.code === "q".toUpperCase()) {
+                    tecla.style.backgroundColor = "pink";
+                }
+            });
+            */
+        });
+    </script>
+
+</body>
+
+</html>

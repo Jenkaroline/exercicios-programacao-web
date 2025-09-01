@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Can</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(0, 140, 255);
+            color: white;
+        }
+
+        body::-webkit-scrollbar {
+            width: 7px;
+        }
+
+        body::-webkit-scrollbar-track {
+            background: rgb(0, 140, 255);
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background: rgb(240, 245, 255);
+            border-radius: 5px;
+        }
+
+        section {
+            font-family: 'Inter', 'Roboto', system-ui, -apple-system, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .topo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 1em;
+            gap: 1em;
+        }
+
+        .topo img {
+            cursor: pointer;
+            width: 2em;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            justify-self: center;
+            background-color: rgb(255, 255, 255);
+            color: rgb(7, 31, 40);
+            width: 40%;
+            padding: 1em;
+            border-radius: 5px;
+            box-shadow: 0px 4px 10px rgba(211, 199, 199, 0.2);
+            font-size: large;
+        }
+
+        .divNone,
+        .cardNoExpand {
+            display: none;
+        }
+
+        .cardExpand {
+            display: block;
+        }
+
+        h3,
+        u {
+            color: rgb(0, 140, 255);
+        }
+
+        u {
+            cursor: pointer;
+        }
+
+        .modalDiv {
+            display: block;
+            background-color: rgb(188, 234, 255);
+            box-shadow: 0px 6px 10px rgba(211, 199, 199, 0.2);
+            border-radius: 5px;
+            padding: 2em;
+            position: fixed;
+            top: 28%;
+            left: 50%;
+            width: 20em;
+        }
+
+        .card-top {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card-top img {
+            width: 1.5em;
+            height: 1.5em;
+            cursor: pointer;
+            margin-top: 1em;
+        }
+
+        .exBloco {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            color: beige;
+            width: 80vw;
+            padding: 2em;
+            margin-bottom: 2em;
+            border: 2px solid rgba(243, 231, 255, 0.3);
+            border-radius: 8px;
+        }
+
+        .exBloco legend {
+            padding: 0 1em;
+        }
+
+        .exBloco legend h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .exBloco input {
+            border-radius: 4px;
+            border: solid 1px blue;
+            padding: 0.5em;
+            margin: 0 0.5em;
+        }
+
+        .exBloco button {
+            background-color: rgb(249, 253, 255);
+            color: rgb(35, 50, 63);
+            border: none;
+            width: 7em;
+            height: 2em;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 1em;
+        }
+
+        .exBloco button:hover {
+            background-color: rgb(230, 240, 250);
+        }
+
+        .questao {
+            margin: 1em 0;
+            font-size: 1.1em;
+        }
+
+        .certo {
+            color: #00ff00;
+            font-weight: bold;
+        }
+
+        .errado {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        .feedback {
+            margin-left: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="conteudo">
+        <div class="topo">
+            <a href="index.html"> <img src="assets/icons/voltar.png" alt="Logo" width="100"> </a>
+            <h1> Can </h1>
+        </div>
+        <div class="card">
+            <div class="conteudo-breve">
+                <div class="card-top">
+                    <p> O "can" é um dos <u>verbos modais</u> mais importantes da língua inglesa. Ele expressa
+                        habilidade,
+                        permissão ou
+                        possibilidade.
+                    </p>
+                    <img src="assets/icons/expandir.png" alt="Expandir" class="expandir">
+                </div>
+                <h3>Exemplos:</h3>
+                <ul>
+                    <li>I can swim (Eu posso nadar).</li>
+                    <li>Can I go to the party? (Posso ir à festa?)</li>
+                    <li>You can do it! (Você consegue fazer isso!)</li>
+                </ul>
+                <div class="modal divNone"> Verbos modais são verbos auxiliares que modificam o sentido do verbo
+                    principal,
+                    acrescentando ideias como possibilidade, obrigação, permissão, conselho, capacidade, certeza ou
+                    dedução.
+                </div>
+            </div>
+            <div class="cardNoExpand">
+                <h3> Passado: could </h3>
+                <ul>
+                    <li>I could swim. (Eu podia nadar.)</li>
+                    <li>Could I go to the party? (Eu podia ir à festa?)</li>
+                    <li>You could do it! (Você conseguia fazer isso!)</li>
+                </ul>
+                <h3> Futuro: i will be able to </h3>
+                <ul>
+                    <li>I will be able to swim. (Eu poderei nadar.)</li>
+                    <li>Will i be able to go to the party? (Eu poderei ir à festa?)</li>
+                    <li>You will be able to do it! (Você vai poder fazer isso!)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="exercicios">
+        <!-- Exercício 1: Complete a frase -->
+        <fieldset class="exBloco">
+            <legend>
+                <h1>Complete a frase</h1>
+            </legend>
+            <em class="chancesComp"> Você tem 3 chances. </em>
+            <div class="questionario-completar"></div>
+            <button onclick="verificarCompletar()">Corrigir</button>
+        </fieldset>
+
+        <!-- Exercício 2: Forma negativa -->
+        <fieldset class="exBloco">
+            <legend>
+                <h1>Reescreva na forma negativa</h1>
+            </legend>
+            <em class="chancesNeg"> Você tem 3 chances. </em>
+            <div class="questionario-negativo"></div>
+            <button onclick="verificarNegativo()">Corrigir</button>
+        </fieldset>
+
+        <!-- Exercício 3: Forma interrogativa -->
+        <fieldset class="exBloco">
+            <legend>
+                <h1>Reescreva como pergunta</h1>
+            </legend>
+            <em class="chancesPerg"> Você tem 3 chances. </em>
+            <div class="questionario-pergunta"></div>
+            <button onclick="verificarPergunta()">Corrigir</button>
+        </fieldset>
+    </section>
+
+
+    <script>
+        let modal = document.querySelector(".divNone");
+        let cardExpand = document.querySelector(".cardNoExpand");
+        let expandir = document.querySelector(".expandir");
+        // explicação verbos modais
+
+        modalExplicacao = document.querySelector("u").addEventListener("click", () => {
+            modal.classList.toggle("modalDiv");
+        });
+
+        // Expandir/contrair card
+        expandir.addEventListener("click", () => {
+            cardExpand.classList.toggle("cardExpand");
+        });
+
+        let chancesComp = document.querySelector(".chancesComp");
+        let chancesNeg = document.querySelector(".chancesNeg");
+        let chancesPerg = document.querySelector(".chancesPerg");
+        let chances = 3;
+
+        // Perguntas para completar
+        const perguntasCompletar = [{
+                frase: "My brother ___ speak three languages. (presente)",
+                resposta: "can"
+            },
+            {
+                frase: "When we were young, we ___ stay up all night. (passado)",
+                resposta: "could"
+            },
+            {
+                frase: "I ___ help you if I had more time. (passado)",
+                resposta: "could"
+            },
+            {
+                frase: "She ___ be a great singer with training. (presente)",
+                resposta: "can"
+            },
+            {
+                frase: "I ___ speak English quite well now. (presente)",
+                resposta: "can"
+            },
+            {
+                frase: "She ___ come to the meeting yesterday because she was sick. (passado)",
+                resposta: "couldn't"
+            },
+            {
+                frase: "When I was a kid, I ___ swim very fast. (passado)",
+                resposta: "could"
+            },
+            {
+                frase: "We ___ visit you tomorrow if we finish our work earlier. (futuro)",
+                resposta: "will be able to"
+            },
+            {
+                frase: "He ___ solve this problem yet, it’s too complicated. (presente)",
+                resposta: "can't"
+            },
+            {
+                frase: "I ___ help you yesterday, but you didn’t ask me. (passado)",
+                resposta: "could"
+            },
+            {
+                frase: "By next year, I ___ save enough money to buy a car. (futuro)",
+                resposta: "will be able to"
+            },
+            {
+                frase: "I’m sorry, I ___ hear what you said — could you repeat? (passado)",
+                resposta: "couldn't"
+            },
+            {
+                frase: "He ___ climb the mountain without any equipment — it’s impossible. (futuro)",
+                resposta: "won't be able to"
+            }
+        ];
+
+        // Perguntas para forma negativa
+        const perguntasNegativo = [{
+                frase: "I'm Brazilian",
+                resposta: "I am not Brazilian"
+            },
+            {
+                frase: "I was a teacher",
+                resposta: "I was not a teacher"
+            },
+            {
+                frase: "I will be busy",
+                resposta: "I will not be busy"
+            },
+            {
+                frase: "You are friends",
+                resposta: "You are not friends"
+            },
+            {
+                frase: "You were drivers",
+                resposta: "You were not drivers"
+            },
+            {
+                frase: "You'll be fat",
+                resposta: "You will not be fat"
+            },
+            {
+                frase: "They are students",
+                resposta: "They are not students"
+            },
+            {
+                frase: "They were dancing",
+                resposta: "They were not dancing"
+            },
+            {
+                frase: "They will know",
+                resposta: "They will not know"
+            },
+            {
+                frase: "We are tired",
+                resposta: "We are not tired"
+            },
+            {
+                frase: "We were tired",
+                resposta: "We were not tired"
+            },
+            {
+                frase: "We will be tired",
+                resposta: "We will be not tired"
+            },
+            {
+                frase: "He is happy",
+                resposta: "He is not happy"
+            },
+            {
+                frase: "He was happy",
+                resposta: "He was not happy"
+            },
+            {
+                frase: "He will be happy",
+                resposta: "He will be not happy"
+            },
+            {
+                frase: "It is cold",
+                resposta: "It is not cold"
+            },
+            {
+                frase: "It was cold",
+                resposta: "It was not cold"
+            },
+            {
+                frase: "It will be cold",
+                resposta: "It will not be cold"
+            },
+            {
+                frase: "She is tall",
+                resposta: "She is not tall"
+            },
+            {
+                frase: "She was fat",
+                resposta: "She was not fat"
+            },
+            {
+                frase: "She will sing",
+                resposta: "She will not sing"
+            }
+        ];
+
+        // Perguntas para forma interrogativa
+        const perguntasPergunta = [{
+                frase: "You are ready",
+                resposta: "Are you ready?"
+            },
+            {
+                frase: "You was sick",
+                resposta: "was you sick?"
+            },
+            {
+                frase: "You will dance",
+                resposta: "will you dance?"
+            },
+            {
+                frase: "I am here",
+                resposta: "i am here?"
+            },
+            {
+                frase: "I was tired",
+                resposta: "was i tired?"
+            },
+            {
+                frase: "I will cry",
+                resposta: "will i cry?"
+            },
+            {
+                frase: "She is pretty",
+                resposta: "Is she pretty?"
+            },
+            {
+                frase: "She was driving",
+                resposta: "was she driving?"
+            },
+            {
+                frase: "She will like",
+                resposta: "will she like?"
+            },
+            {
+                frase: "We are late",
+                resposta: "Are we late?"
+            },
+            {
+                frase: "We were late",
+                resposta: "Were we late?"
+            },
+            {
+                frase: "We will be ok",
+                resposta: "will we be ok?"
+            },
+            {
+                frase: "They are coming",
+                resposta: "Are they coming?"
+            },
+            {
+                frase: "They were leave",
+                resposta: "were they leave?"
+            },
+            {
+                frase: "They will leave togheter",
+                resposta: "will they leave togheter?"
+            },
+            {
+                frase: "He is busy",
+                resposta: "Is he busy?"
+            },
+            {
+                frase: "He was correct",
+                resposta: "was he correct?"
+            },
+            {
+                frase: "It is working",
+                resposta: "Is it working?"
+            }
+        ];
+
+        /* questionario */
+
+        function embaralhar(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        function gerarQuestionarioCompletar() {
+            embaralhar(perguntasCompletar);
+            const container = document.querySelector(".questionario-completar");
+            container.innerHTML = "";
+
+            perguntasCompletar.slice(0, 5).forEach((pergunta, index) => {
+                const div = document.createElement("div");
+                div.className = "questao";
+                div.innerHTML = `
+                    <label>
+                        ${pergunta.frase.replace("___", `<input type="text" id="completar${index}">`)}
+                    </label>
+                    <span id="feedback-completar${index}" class="feedback"></span>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        // Gerar questionário negativo
+        function gerarQuestionarioNegativo() {
+            embaralhar(perguntasNegativo);
+            const container = document.querySelector(".questionario-negativo");
+            container.innerHTML = "";
+
+            perguntasNegativo.slice(0, 5).forEach((pergunta, index) => {
+                const div = document.createElement("div");
+                div.className = "questao";
+                div.innerHTML = `
+                    <label>
+                        ${pergunta.frase}: <input type="text" id="negativo${index}">
+                    </label>
+                    <span id="feedback-negativo${index}" class="feedback"></span>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        // Gerar questionário de pergunta
+        function gerarQuestionarioPergunta() {
+            embaralhar(perguntasPergunta);
+            const container = document.querySelector(".questionario-pergunta");
+            container.innerHTML = "";
+
+            perguntasPergunta.slice(0, 5).forEach((pergunta, index) => {
+                const div = document.createElement("div");
+                div.className = "questao";
+                div.innerHTML = `
+                    <label>
+                        ${pergunta.frase}: <input type="text" id="pergunta${index}">
+                    </label>
+                    <span id="feedback-pergunta${index}" class="feedback"></span>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function verificarCompletar() {
+
+            perguntasCompletar.slice(0, 5).forEach((pergunta, index) => {
+                let input = document.getElementById(`completar${index}`);
+                let feedback = document.getElementById(`feedback-completar${index}`);
+
+                if (input && feedback) {
+                    let respostaUsuario = input.value.trim().toLowerCase();
+                    let respostaCorreta = pergunta.resposta.toLowerCase();
+                    let acertos = 0;
+
+                    if (respostaCorreta == respostaUsuario) {
+                        feedback.textContent = `✅`;
+                        feedback.className = "feedback certo";
+                        acertos++;
+                    } else {
+                        feedback.textContent = `❌`;
+                        feedback.className = "feedback errado";
+                    }
+                }
+            })
+
+            if (chances > 1) {
+                chances--;
+                chancesComp.textContent = `Você tem ${chances} chances.`;
+            } else {
+                chancesComp.textContent = `Você errou! Tente novamente.`;
+                gerarQuestionarioCompletar();
+                chances = 3; // Resetar chances
+            }
+        }
+
+
+        // Verificar respostas - Negativo
+        function verificarNegativo() {
+            perguntasNegativo.slice(0, 5).forEach((pergunta, index) => {
+                const input = document.getElementById(`negativo${index}`);
+                const feedback = document.getElementById(`feedback-negativo${index}`);
+
+                if (input && feedback) {
+                    const respostaUsuario = input.value.trim().toLowerCase();
+                    const respostaCorreta = pergunta.resposta.toLowerCase();
+
+                    if (respostaUsuario === respostaCorreta || respostaUsuario === respostaCorreta.replace(
+                            "cannot", "can't").replace("will not", "won't").replace("can not", "can't")) {
+                        feedback.textContent = `✅`;
+                        feedback.className = "feedback certo";
+                    } else {
+                        feedback.textContent = `❌`;
+                        feedback.className = "feedback errado";
+                    }
+                }
+            })
+
+            if (chances > 1) {
+                chances--;
+                chancesNeg.textContent = `Você tem ${chances} chances.`;
+            } else {
+                chancesNeg.textContent = `Você errou! Tente novamente.`;
+                gerarQuestionarioNegativo();
+                chances = 3;
+            }
+        }
+
+        // Verificar respostas - Pergunta
+        function verificarPergunta() {
+            perguntasPergunta.slice(0, 5).forEach((pergunta, index) => {
+                const input = document.getElementById(`pergunta${index}`);
+                const feedback = document.getElementById(`feedback-pergunta${index}`);
+
+                if (input && feedback) {
+                    const respostaUsuario = input.value.trim().toLowerCase();
+                    const respostaCorreta = pergunta.resposta.toLowerCase();
+
+                    if (respostaUsuario === respostaCorreta) {
+                        feedback.textContent = "✅";
+                        feedback.className = "feedback certo";
+                    } else {
+                        feedback.textContent = `❌`;
+                        feedback.className = "feedback errado";
+                    }
+                }
+            })
+
+            if (chances > 1) {
+                chances--;
+                chancesPerg.textContent = `Você tem ${chances} chances.`;
+            } else {
+                chancesPerg.textContent = `Você errou! Tente novamente.`;
+                gerarQuestionarioPergunta();
+                chances = 3; // Resetar chances
+            }
+        }
+
+        // Inicializar quando a página carregar
+        window.onload = function () {
+            gerarQuestionarioCompletar();
+            gerarQuestionarioNegativo();
+            gerarQuestionarioPergunta();
+        };
+    </script>
+</body>
+
+</html>
