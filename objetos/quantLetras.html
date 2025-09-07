@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let palavra = prompt("Digite uma palavra: ");
+
+        function contarLetras(palavra) {
+            let contador = {};
+
+            for (let letra of palavra.toLowerCase()) {
+                if (contador[letra]) {
+                    contador[letra] += 1;
+                } else {
+                    contador[letra] = 1;
+                }
+
+            }
+            return contador;
+        }
+
+        console.log(contarLetras(palavra));
+    </script>
+</body>
+<!--
+Bom dia Rayner, tudo bem? 
+Estou ajudando a Geo a cuidar das tarefas no Jira e queria tirar uma dúvida sobre o status dessa aqui
+Acho que é com você mesmo
+ 
+
+-->
+</html>
+

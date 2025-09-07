@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        .calc {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        input {
+            width: 20vw;
+            margin-bottom: 1em;
+        }
+
+        .resultado {
+            background-color: rgba(131, 129, 127, 0.404);
+            width: 20vw;
+            height: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calc">
+        <h1> Calculadora </h1>
+        <input class="num1" type="number" placeholder="Digite um número: ">
+        <input class="num2" type="number" placeholder="Digite um número: ">
+
+        <input type="submit" class="botao botaoSoma" value="+"> </input>
+        <input type="submit" class="botao botaoSub" value="-"> </input>
+        <input type="submit" class="botao botaoMult" value="X"> </input>
+        <input type="submit" class="botao botaoDiv" value="%"> </input>
+
+        <div class="resultado"> </div>
+    </div>
+
+
+    <script>
+        let num1 = document.querySelector('.num1');
+        let num2 = document.querySelector('.num2');
+        let botaoSoma = document.querySelector('.botaoSoma');
+        let botaoSub = document.querySelector('.botaoSub');
+        let botaoMult = document.querySelector('.botaoMult');
+        let botaoDiv = document.querySelector('.botaoDiv');
+        let resultado = document.querySelector('.resultado');
+    
+        botaoSoma.addEventListener('click', () => {
+            let soma = Number(num1.value) + Number(num2.value);
+            resultado.textContent = soma;
+        });
+
+        botaoSub.addEventListener('click', () => {
+            let soma = Number(num1.value) - Number(num2.value);
+            resultado.textContent = soma;
+        });
+
+        botaoMult.addEventListener('click', () => {
+            let soma = Number(num1.value) * Number(num2.value);
+            resultado.textContent = soma;
+        });
+
+        botaoDiv.addEventListener('click', () => {
+            let soma = Number(num1.value) / Number(num2.value);
+            resultado.textContent = soma;
+        });
+
+    </script>
+</body>
+
+</html>
